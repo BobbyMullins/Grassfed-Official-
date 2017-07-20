@@ -1,0 +1,87 @@
+/* Navbar */
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white; 
+}
+
+/* Navbar Psuedo Classes */
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: black; 
+    background-color: white; 
+}
+
+.navbar-inverse .navbar-nav>li>a:active {
+    color: black; 
+    background-color: white; 
+}
+
+#fb-nav:hover {
+    color: white; 
+    background-color: #3b5998; 
+}
+
+#sc-nav:hover {
+    color: white; 
+    background-color: #ff7700; 
+    
+}
+
+/* Form */
+
+form {
+    border: 2px solid black; 
+    margin-top: 15%; 
+    padding-bottom: 2.5%;
+}
+
+p {
+    margin-bottom: 5%; 
+}
+
+button {
+    margin-top: 2.5%; 
+}
+
+.btn {
+    background: white; 
+    border: 2px solid black; 
+    border-radius: 0; 
+}
+
+.btn:hover {
+    background: black; 
+    color: white; 
+    transition: 0.3s; 
+}
+
+/* Footer */
+
+.footer {
+    background-color: black; 
+    color: white; 
+    margin-top: 10%; 
+}
+
+/* Media Queries */
+
+@media (max-width: 640px) {
+    form {
+        border: none; 
+    }
+
+@media (min-width:640px) and (max-width: 768px) {
+    form {
+        border: none; 
+    }    
+}
+
+@media (min-width: 768px) and (max-width:992px) {
+    form {
+        border: none; 
+    }    
+}
+
+@media (min-width: 992px) and (max-width:1200px) {
+    
+}

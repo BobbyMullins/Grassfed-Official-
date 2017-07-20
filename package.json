@@ -1,0 +1,20 @@
+{
+  "name": "grassfed",
+  "version": "1.0.0",
+  "description": "Official Grassfed Website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bobby Digi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "nodemailer": "^4.0.1",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "postmark": "^1.4.1",
+    "xoauth2": "^1.2.0"
+  }
+}

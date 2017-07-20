@@ -1,0 +1,145 @@
+/* Navbar */
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white; 
+}
+
+/* Navbar Psuedo Classes */
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: black; 
+    background-color: white; 
+}
+
+.navbar-inverse .navbar-nav>li>a:active {
+    color: black; 
+    background-color: white; 
+}
+
+#fb-nav:hover {
+    color: white; 
+    background-color: #3b5998; 
+}
+
+#sc-nav:hover {
+    color: white; 
+    background-color: #ff7700; 
+    
+}
+
+/* Jumbotron */
+
+.jumbotron {
+    background-color: white; 
+}
+
+/* Images General */
+
+img {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    margin-bottom: 5%; 
+    width: 100%; 
+}
+
+/* First Image */
+#first-image {
+    margin-top: 1%; 
+}
+
+/* Last Image */
+#last-image {
+    margin-bottom: 2.5%; 
+}
+
+/* Mailing List */
+
+#mailing-list {
+    border: 2px solid black; 
+    padding-bottom: 2.5%;
+    padding-top: 1%; 
+}
+
+#email-label {
+    margin-left: 2.5%; 
+}
+
+.btn {
+    background: white; 
+    border: 2px solid black; 
+    border-radius: 0; 
+    margin-left: 2.5%; 
+}
+
+.btn:hover {
+    background: black; 
+    color: white; 
+    transition: 0.3s; 
+}
+
+/* Footer */
+
+.footer {
+    background-color: black; 
+    color: white; 
+    margin-top: 10%; 
+}
+
+/* Media Queries */
+
+@media (max-width: 640px) {
+    
+    .jumbotron {
+        margin-top: 5%;
+        margin-right: 2.5%; 
+        margin-left: 2.5%;
+    }
+    
+    #mailing-list {
+        border: none;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    input {
+        padding-left: 2%; 
+        padding-right: 2%;    
+    }
+    
+    button {
+        margin-top: 5%;
+    }
+}
+
+@media (min-width:640px) and (max-width: 768px) {
+    
+    .jumbotron {
+        margin-top: 5%; 
+        margin-right: 2.5%; 
+        margin-left: 2.5%;
+    }
+    
+    #mailing-list {
+        border: none;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    input {
+        padding-left: 2%; 
+        padding-right: 2%;    
+    }
+    
+    button {
+        margin-top: 5%;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width:992px) {
+    
+}
+
+@media (min-width: 992px) and (max-width:1200px) {
+    
+}

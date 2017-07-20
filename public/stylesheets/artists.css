@@ -1,0 +1,130 @@
+/* Navbar */
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white; 
+}
+
+/* Navbar Psuedo Classes */
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: black; 
+    background-color: white; 
+}
+
+.navbar-inverse .navbar-nav>li>a:active {
+    color: black; 
+    background-color: white; 
+}
+
+#fb-nav:hover {
+    color: white; 
+    background-color: #3b5998; 
+}
+
+#sc-nav:hover {
+    color: white; 
+    background-color: #ff7700; 
+    
+}
+
+/* Images */
+
+.top-row {
+    margin-top: 10%; 
+}
+
+.second-row {
+    margin-top: 5%; 
+}
+
+img {  
+    height: 60%; 
+    width: 60%; 
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.img-thumbnail {
+    border: none;
+    box-shadow: none; 
+}
+
+img:hover {
+    opacity: 0.5; 
+}
+
+/* Mailing List */
+
+#mailing-list {
+    border: 2px solid black; 
+    margin-top: 5%; 
+    padding-bottom: 2.5%;
+    padding-top: 2.5%; 
+}
+
+#email-label {
+    margin-left: 2.5%; 
+}
+
+.sign-up {
+    margin-left: 2.5%; 
+}
+
+/* Buttons */
+
+.btn-outline-primary {
+    background-color: white;
+    border: 2px solid black; 
+    border-radius: 0; 
+    color: black; 
+}
+
+.btn-outline-primary:hover {
+    background-color: black; 
+    color: white; 
+    transition: 0.3s; 
+}
+
+.footer {
+    background-color: black; 
+    color: white; 
+    margin-top: 10%; 
+}
+
+/* Media Queries */
+
+@media (max-width: 640px) {
+    
+    #first-image {
+        margin-top: 5%;
+    }
+    
+    #mailing-list {
+        border: none;
+        margin-left: 2.5%; 
+        margin-right: 2.5%; 
+    }
+    
+    button {
+        margin-top: 5%;
+    }
+    
+}
+
+@media (min-width:640px) and (max-width: 768px) {
+    
+    #first-image {
+        margin-top: 5%;
+    }
+    
+    #mailing-list {
+        border: none;
+        margin-left: 2.5%; 
+        margin-right: 2.5%;
+    }
+    
+    button {
+        margin-top: 5%;
+    }
+    
+}
