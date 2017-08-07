@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer'); 
 // var postmark = require('postmark'); 
 // var client = new postmark.Client('server key')
-var xoauth2 = require('xoauth2'); 
+// var xoauth2 = require('xoauth2'); 
 var smtpTransport = require('nodemailer-smtp-transport'); 
 
 
@@ -41,57 +41,38 @@ app.get('/events-upcoming', function(req, res){
     res.render('events-upcoming'); 
 }); 
 
-/* contact us form */
-
-app.post('/contact', function(req, res){
+app.post('/contactsent', function(req, res){
+    res.send('You Hit the Post Route'); 
     
+    var mailOpts, smtpTrans;
     
-    var transporter = nodemailer.createTransport(smtpTransport({
-        host: 'smtp.gmail.com', 
-        port: 587, 
-        secure: false, 
-        auth: {
-            xoauth2: xoauth2.createXOAuth2Generator({
-                user: 'xxxxxx@gmail.com', 
-                pass: 'xxxxxx',
-                clientId: '425618185395-8km3r0sgnm738lcsf7tsgffdcsppn3dv.apps.googleusercontent.com', 
-                clientSecret: '3IRdCzdBgLDGtoOcUqBf06p5', 
-                refreshToken: '1/EppQlfHkl5gDCE245YQaZ-5jV0tmgdrKsjHqHFP4OHo'
-                
-                
-            })
-        }
-    })); 
+    smtpTrans = nodemailer.createTransport({
+      service: 'Gmail', 
+      auth: {
+        user: 'robert.w.mullins3@gmail.com',
+        pass: 'sublime88'
+      }
+    }); 
     
-    var mailOptions = {
-      from: req.body.first_name + "" + req.body.last_name, 
-      to: 'xxxxxxxx@gmail.com', 
-      subject: req.body.subject, 
-      text: req.body.message
-       
+    mailOpts = {
+      from: req.body.first_name + " " + req.body.last_name,  
+      to: 'robert.w.mullins3@gmail.com',
+      subject: req.body.subject,
+      text: req.body.email + " " + req.body.message
     }; 
     
-    transporter.sendMail(mailOptions, function(err, res){
-        if(err) {
-            console.log(err); 
-        }
-        else {
-            res.redirect('/contact'); 
-        }
+    smtpTrans.sendMail(mailOpts, function (err, res) {
+      
+      if (err) {
+          console.log('There was a problem')
+      }
+      else {
+          console.log('Email sent!')
+      }
     }); 
+
 }); 
 
-// code for postmaster js (not working)
-// app.post('/contact', function(req, res){
-//     client.sendEmail({
-//         "From": 'req.body.first_name + "" + req.body.last_name', 
-//         "To": 'xxxxxx@gmail.com', 
-//         "Subject": 'req.body.subject', 
-//         "TextBody": 'req.body.message'
-//     });  
-    
-// }); 
-
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log('now being served'); 
-}); 
+app.listen(process.env.PORT, process.env.IP, function(req, res){
+    console.log('server is started'); 
+});
